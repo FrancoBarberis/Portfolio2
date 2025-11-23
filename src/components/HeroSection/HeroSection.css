@@ -23,22 +23,26 @@ h1 {
     width: fit-content;
     height: fit-content;
     font-size: 10vh;
+    right: 0;
 }
-
-.hero-section .main-container {
+.hero-section .absolute-wrapper {
     position: absolute;
-    text-transform: uppercase;
-    font-size: 15vh;
-    height: fit-content;
-    line-height: 1;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0;
-    letter-spacing: -0.5px;
-    z-index: 2;
-    text-align: right;
-    right: 10%;
     top: 5%;
+    right: 10%;
+}
+.hero-section .main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: auto;
+  text-transform: uppercase;
+  font-size: 15vh;
+  height: fit-content;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  letter-spacing: normal;
+  text-align: right;
 }
     
 
@@ -47,22 +51,53 @@ h1 {
     justify-content: flex-end;
     gap: 10px;
     margin-top: 10px;
-    padding-right: 2%;
 }
 
 button {
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: all 0.3s ease-in-out;
-    font-family: "Pixel Mono", "Arial Narrow", Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  padding: 12px 24px;
+  background: #222;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
+/* Capa que va a aparecer de izquierda a derecha */
+button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 
-.hero-section button:hover {
-    background-color: rgb(2, 2, 102);
-}   
+  background: var(--blanco); /* El color nuevo */
+
+  transform: scaleX(0);     /* Arranca encogido */
+  transform-origin: left;   /* Se expande desde la izquierda */
+  transition: transform 0.3s ease-in;
+
+  z-index: 0;
+}
+
+/* El texto queda arriba */
+button span {
+  position: relative;
+  z-index: 1;
+  text-transform: uppercase;
+  font-family: "Pixel Mono", "Arial Narrow", Arial, sans-serif;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Al hacer hover, expandimos el before */
+button:hover::before {
+  transform: scaleX(1);
+}
+
+button:hover span {
+  color: black;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.10);
+  transition: color 0.6s ease;
+}
