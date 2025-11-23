@@ -7,54 +7,110 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 2rem 0;
+    /* Remove horizontal padding to allow full width scroll */
     box-sizing: border-box;
+    overflow: hidden;
+    /* Prevent horizontal scrollbar on the page */
 }
 
 .tech-stack h1 {
     font-size: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     text-transform: uppercase;
     text-align: center;
+    padding: 0 1rem;
 }
 
-.tech-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 2rem;
+.scroll-container {
     width: 100%;
-    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    position: relative;
+}
+
+.scroll-wrapper {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.scroll-content {
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+    /* Allow content to determine width */
+}
+
+/* Animation for scrolling left */
+.scroll-wrapper.left .scroll-content {
+    animation: scrollLeft 30s linear infinite;
+}
+
+/* Animation for scrolling right */
+.scroll-wrapper.right .scroll-content {
+    animation: scrollRight 30s linear infinite;
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-25%);
+        /* Moves by 1/4th because we quadrupled the content */
+    }
+}
+
+@keyframes scrollRight {
+    0% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .tech-item {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 2rem;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    border-radius: 8px;
-    transition: transform 0.3s ease, background 0.3s ease;
+    border-radius: 50px;
+    /* Pill shape */
+    white-space: nowrap;
+    color: #ccc;
+    transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
     cursor: default;
 }
 
 .tech-item:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-color: white;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Mobile adjustments */
 @media (max-width: 600px) {
     .tech-stack h1 {
         font-size: 2rem;
+        margin-bottom: 2rem;
     }
 
-    .tech-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+    .scroll-container {
+        gap: 2rem;
     }
 
     .tech-item {
-        padding: 1rem;
-        font-size: 1rem;
+        font-size: 1.2rem;
+        padding: 0.8rem 1.5rem;
     }
 }
