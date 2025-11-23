@@ -1,16 +1,68 @@
 .hero-section {
+    position: relative;
     width: 100%;
     height: 100dvh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: yellow;
+    background-color: burlywood;
     color: black;
     font-weight: bold;
+    overflow: hidden;
+    background-image: url("../../assets/Wave.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(.6);
 }
 
-.hero-section button {
-    border-radius: 0px;
-    text-transform: uppercase;
+h1 {
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+    height: fit-content;
+    font-size: 10vh;
 }
+
+.hero-section .main-container {
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 15vh;
+    height: fit-content;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    letter-spacing: -0.5px;
+    z-index: 2;
+    text-align: right;
+    right: 10%;
+    top: 5%;
+}
+    
+
+.hero-section .seccion-botones {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+    padding-right: 2%;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    font-family: "Pixel Mono", "Arial Narrow", Arial, sans-serif;
+}
+
+
+.hero-section button:hover {
+    background-color: rgb(2, 2, 102);
+}   
