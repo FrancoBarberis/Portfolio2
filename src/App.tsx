@@ -1,14 +1,15 @@
 import { useState } from "react";
 import "./App.css";
-import {HeroSection, About, Projects} from "./components"
+import {HeroSection, About, Projects, TechStack} from "./components"
 
 function App() {
 
   return (
     <>
       <HeroSection/>
-      <About/>
       <Projects/>
+      <TechStack/>
+      <About/>
     </>
   );
 }

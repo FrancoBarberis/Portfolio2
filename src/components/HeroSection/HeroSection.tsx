@@ -19,12 +19,12 @@ export default function HeroSection() {
           </h1>
           <h2>Frontend developer</h2>
           <div className="seccion-botones">
-            <button onClick={() => scrollToSection("about")}>
-              <span>Sobre mí</span>
-            </button>
             <button onClick={() => scrollToSection("projects")}>
               {" "}
               <span>Proyectos</span>
+            </button>
+            <button onClick={() => scrollToSection("about")}>
+              <span>Sobre mí</span>
             </button>
             <button onClick={() => scrollToSection("contact")}>
               {" "}

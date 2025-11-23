@@ -23,39 +23,43 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  filter: brightness(0.6); /* Ajusta el brillo aquí */
+  filter: brightness(0.6);
+  /* Ajusta el brillo aquí */
   z-index: 0;
 }
 
-.hero-section > * {
+.hero-section>* {
   position: relative;
   z-index: 1;
 }
 
 h1 {
-    margin: 0;
-    padding: 0;
-    width: fit-content;
-    height: fit-content;
-    font-size: 14vh;
-    right: 0;
+  margin: 0;
+  padding: 0;
+  width: fit-content;
+  max-width: 100%;
+  height: fit-content;
+  font-size: 14vh;
+  right: 0;
 }
 
 h2 {
-    margin: 0;
-    padding: 0;
-    width: fit-content;
-    height: fit-content;
-    font-size: 5vh;
-    right: 0;
-    font-weight: extrabold;
+  margin: 0;
+  padding: 0;
+  width: fit-content;
+  max-width: 100%;
+  height: fit-content;
+  font-size: 5vh;
+  right: 0;
+  font-weight: extrabold;
 }
 
 .hero-section .absolute-wrapper {
-    position: absolute;
-    top: 5%;
-    right: 10%;
+  position: absolute;
+  top: 5%;
+  right: 10%;
 }
+
 .hero-section .main-container {
   display: flex;
   flex-direction: column;
@@ -71,13 +75,13 @@ h2 {
   text-align: right;
   gap: 10px;
 }
-    
+
 
 .hero-section .seccion-botones {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 button {
@@ -99,10 +103,13 @@ button::before {
   width: 100%;
   height: 100%;
 
-  background: var(--blanco); /* El color nuevo */
+  background: var(--blanco);
+  /* El color nuevo */
 
-  transform: scaleX(0);     /* Arranca encogido */
-  transform-origin: left;   /* Se expande desde la izquierda */
+  transform: scaleX(0);
+  /* Arranca encogido */
+  transform-origin: left;
+  /* Se expande desde la izquierda */
   transition: transform 0.3s ease-in;
 
   z-index: 0;
@@ -126,7 +133,7 @@ button:hover::before {
 
 button:hover span {
   color: black;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.10);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.10);
   transition: color 0.6s ease;
 }
 
@@ -137,33 +144,40 @@ button:hover span {
     height: auto;
     padding: 40px 10px;
   }
+
   h1 {
     font-size: 8vh;
     text-align: center;
   }
+
   h2 {
     font-size: 3vh;
     text-align: center;
   }
+
   .hero-section .main-container {
     font-size: 7vh;
     align-items: center;
     text-align: center;
   }
+
   .hero-section .absolute-wrapper {
     position: static;
     top: auto;
     right: auto;
     margin-bottom: 20px;
   }
+
   .hero-section .seccion-botones {
     justify-content: center;
     flex-wrap: wrap;
     gap: 8px;
   }
+
   button {
     padding: 16px 28px;
   }
+
   button span {
     font-size: 18px;
   }
@@ -173,16 +187,20 @@ button:hover span {
   .hero-section {
     padding: 20px 5px;
   }
+
   h1 {
     font-size: 5vh;
   }
+
   h2 {
     font-size: 2.2vh;
   }
+
   .hero-section .main-container {
     font-size: 4vh;
     gap: 6px;
   }
+
   button {
     padding: 8px 12px;
     font-size: 12px;
