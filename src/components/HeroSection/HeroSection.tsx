@@ -1,4 +1,12 @@
 import "./HeroSection.css";
+
+
+function scrollToSection(sectionName: string) {
+  const Section = document.getElementById(sectionName);
+  if (Section) {
+    Section.scrollIntoView({ behavior: "smooth" });
+  }
+}
 export default function HeroSection() {
   return (
     <section className="hero-section">
@@ -9,18 +17,18 @@ export default function HeroSection() {
             <br />
             Barberis
           </h1>
+          <h2>Frontend developer</h2>
           <div className="seccion-botones">
-            <button>
-              {" "}
+            <button onClick={() => scrollToSection("about")}>
               <span>Sobre mí</span>
             </button>
-            <button>
+            <button onClick={() => scrollToSection("projects")}>
               {" "}
-              <span>Click Me</span>
+              <span>Proyectos</span>
             </button>
-            <button>
+            <button onClick={() => scrollToSection("contact")}>
               {" "}
-              <span>Click Me</span>
+              <span>Contacto</span>
             </button>
           </div>
         </div>

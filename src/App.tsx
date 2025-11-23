@@ -1,14 +1,14 @@
 import { useState } from "react";
 import "./App.css";
-import {HeroSection, Indice} from "./components"
+import {HeroSection, About, Projects} from "./components"
 
 function App() {
-  const [count, setCount] = useState<number>(0);
 
   return (
     <>
       <HeroSection/>
-      <Indice/>
+      <About/>
+      <Projects/>
     </>
   );
 }

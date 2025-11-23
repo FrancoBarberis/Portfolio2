@@ -1,2 +1,3 @@
 export { default as HeroSection } from './HeroSection/HeroSection';
-export { default as Indice } from './Index/Indice';
+export { default as About } from './About/About';
+export { default as Projects } from './Projects/Projects';
