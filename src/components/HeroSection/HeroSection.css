@@ -25,6 +25,9 @@
   background-size: cover;
   filter: brightness(0.6);
   z-index: 0;
+  /* Gradual fade to black using mask */
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 40%, transparent 100%);
 }
 
 .hero-section>* {
@@ -36,6 +39,7 @@ h1 {
   margin: 0;
   padding: 0;
   width: fit-content;
+  max-width: 100%;
   height: fit-content;
   font-size: 14vh;
   right: 0;
@@ -45,6 +49,7 @@ h2 {
   margin: 0;
   padding: 0;
   width: fit-content;
+  max-width: 100%;
   height: fit-content;
   font-size: 5vh;
   right: 0;
@@ -84,7 +89,7 @@ button {
   position: relative;
   overflow: hidden;
   padding: 12px 24px;
-  background: #222;
+  background: #000;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -133,17 +138,17 @@ button:hover span {
   }
 
   h1 {
-    font-size: 8vh;
+    font-size: 10vh;
     text-align: center;
   }
 
   h2 {
-    font-size: 3vh;
+    font-size: 4vh;
     text-align: center;
   }
 
   .hero-section .main-container {
-    font-size: 7vh;
+    font-size: 10vh;
     align-items: center;
     text-align: center;
   }
@@ -158,15 +163,15 @@ button:hover span {
   .hero-section .seccion-botones {
     justify-content: center;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 10px;
   }
 
   button {
-    padding: 16px 28px;
+    padding: 14px 26px;
   }
 
   button span {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -176,20 +181,23 @@ button:hover span {
   }
 
   h1 {
-    font-size: 5vh;
+    font-size: 6vh;
   }
 
   h2 {
-    font-size: 2.2vh;
+    font-size: 2.5vh;
   }
 
   .hero-section .main-container {
-    font-size: 4vh;
+    font-size: 5vh;
     gap: 6px;
   }
 
   button {
-    padding: 8px 12px;
-    font-size: 12px;
+    padding: 12px 20px;
+  }
+
+  button span {
+    font-size: 14px;
   }
 }

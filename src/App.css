@@ -1,0 +1,4 @@
+/* Remove gaps between sections */
+#root>section {
+    margin: 0;
+}

@@ -7,6 +7,12 @@
   --gradient-diagonal: linear-gradient(180deg, var(--negro) 0%, var(--azul-oscuro) 50%, var(--negro) 100%);
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html,
 body,
 #root {
@@ -14,13 +20,8 @@ body,
   width: 100%;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   background-color: var(--azul-oscuro);
   overflow-x: hidden;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 @font-face {

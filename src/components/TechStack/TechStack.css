@@ -37,6 +37,7 @@
     padding: 15px 0;
     display: flex;
     justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .ribbon-content {
@@ -56,15 +57,15 @@
 .tech-pill {
     display: inline-block;
     padding: 18px 36px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid var(--blanco);
+    background: transparent;
+    border: none;
     border-radius: 50px;
     font-size: 1.3rem;
     font-weight: bold;
     white-space: nowrap;
     text-transform: uppercase;
-    backdrop-filter: blur(10px);
     transition: all 0.3s ease;
+    color: var(--blanco);
 }
 
 .tech-pill:hover {

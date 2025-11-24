@@ -25,9 +25,8 @@ export default function HeroSection() {
             <button onClick={() => scrollToSection("about")}>
               <span>Sobre mí</span>
             </button>
-            <button onClick={() => scrollToSection("contact")}>
-              {" "}
-              <span>Contacto</span>
+            <button onClick={() => scrollToSection("tech-stack")}>
+              <span>Stack</span>
             </button>
           </div>
         </div>
