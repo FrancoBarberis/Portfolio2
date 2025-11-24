@@ -1,14 +1,26 @@
 :root {
   --azul-oscuro: rgba(26, 45, 90, 1);
-  --blanco:rgba(255, 255, 255, 1);
+  --blanco: rgba(255, 255, 255, 1);
+  --negro: rgba(0, 0, 0, 1);
+  --gradient-blue-black: linear-gradient(180deg, var(--negro) 0%, var(--azul-oscuro) 50%, var(--negro) 100%);
+  --gradient-black-blue: linear-gradient(180deg, var(--negro) 0%, var(--azul-oscuro) 50%, var(--negro) 100%);
+  --gradient-diagonal: linear-gradient(180deg, var(--negro) 0%, var(--azul-oscuro) 50%, var(--negro) 100%);
 }
-html, body, #root {
+
+html,
+body,
+#root {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: var(--azul-oscuro);
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -16,6 +28,6 @@ html, body, #root {
   src: url("../public/fonts/VCR_OSD_MONO_1.001.ttf");
 }
 
-body{
+body {
   font-family: "Pixel Mono", monospace;
 }

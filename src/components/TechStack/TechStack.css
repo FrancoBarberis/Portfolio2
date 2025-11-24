@@ -1,0 +1,132 @@
+.tech-stack {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    background: var(--gradient-blue-black);
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.tech-stack h1 {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.ribbons-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.ribbon {
+    width: 100%;
+    overflow: hidden;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.ribbon-content {
+    display: flex;
+    gap: 30px;
+    width: fit-content;
+}
+
+.ribbon-ltr .ribbon-content {
+    animation: scroll-left 30s linear infinite;
+}
+
+.ribbon-rtl .ribbon-content {
+    animation: scroll-right 30s linear infinite;
+}
+
+.tech-pill {
+    display: inline-block;
+    padding: 18px 36px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--blanco);
+    border-radius: 50px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    white-space: nowrap;
+    text-transform: uppercase;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.tech-pill:hover {
+    background: var(--blanco);
+    color: var(--azul-oscuro);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-33.333%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-33.333%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tech-stack {
+        padding: 40px 0;
+    }
+
+    .tech-stack h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        padding: 0 15px;
+    }
+
+    .ribbons-container {
+        gap: 20px;
+    }
+
+    .tech-pill {
+        padding: 14px 28px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-stack h1 {
+        font-size: 1.5rem;
+    }
+
+    .tech-pill {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+
+    .ribbons-container {
+        gap: 15px;
+    }
+}
