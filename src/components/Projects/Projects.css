@@ -45,7 +45,7 @@
 
 .projects p {
   font-size: 1.2rem;
-  text-align: center;
+  text-align: right;
 }
 
 @media (max-width: 768px) {
