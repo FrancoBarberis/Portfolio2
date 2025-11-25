@@ -10,11 +10,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, imageUrl, link }) => (
-    <div className="project-card">
-        <div
-            className="project-card-image"
-            style={{ backgroundImage: `url(${imageUrl})` }}
-        ></div>
+    <div className="project-card" style={{ backgroundImage: `url(${imageUrl})` }}>
         <div className="project-card-content">
             <h3 className="project-card-title">{title}</h3>
             <p className="project-card-description">{description}</p>
