@@ -11,8 +11,7 @@ export default function HeroSection({ goToSection }: HeroSectionProps) {
       <div className="absolute-wrapper">
         <div className="main-container">
           <h1>
-            Franco
-            <br />
+            Franco<br/>
             Barberis
           </h1>
           <h2>Frontend developer</h2>

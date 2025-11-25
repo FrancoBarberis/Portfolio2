@@ -22,7 +22,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     z-index: 1;
-    width: 100%;
+    width: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,6 +100,8 @@
     text-transform: uppercase;
     transition: all 0.3s ease;
     color: var(--blanco);
+    cursor:default;
+    user-select: none;
 }
 
 .tech-pill:hover {

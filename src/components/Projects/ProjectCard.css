@@ -1,7 +1,7 @@
 .project-card {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 40vw;
+  height: 35vh;
   aspect-ratio: 16/9;
   background: #000;
   box-sizing: border-box;
@@ -13,15 +13,6 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
-  max-width: none;
-  max-height: none;
-}
-@media (max-width: 1024px) {
-  .project-card {
-    width: 90vw;
-    aspect-ratio: 16/9;
-    margin-bottom: 16px;
-  }
 }
 
 /* Animated border lines using ::before and ::after */
@@ -176,31 +167,7 @@
   line-height: 1.6;
 }
 
-.project-card {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 16/9;
-  background: #000;
-  box-sizing: border-box;
-  overflow: hidden;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 280px;
-  max-height: 160px;
-}
-
-.project-card-link:hover {
-  background: #002a47;
-  transform: translateY(-2px);
-}
-
-/* Desktop: Horizontal 16:9 layout - CONSOLIDATED */
+/* Desktop: Horizontal 16:9 layout */
 @media (min-width: 1025px) {
   .project-card {
     display: grid;
