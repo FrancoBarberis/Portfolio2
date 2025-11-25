@@ -1,11 +1,25 @@
 .project-card {
   position: relative;
-  width: 100%;
+  width: 22vw;
+  aspect-ratio: 16/9;
   background: #000;
   box-sizing: border-box;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin: 0;
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .project-card {
+    width: 90vw;
+    aspect-ratio: 16/9;
+    margin-bottom: 16px;
+  }
 }
 
 /* Animated border lines using ::before and ::after */

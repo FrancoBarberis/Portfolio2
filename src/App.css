@@ -2,3 +2,51 @@
 #root>section {
     margin: 0;
 }
+
+.horizontal-display {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./assets/Wave.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(0.6);
+    z-index: -1;
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
+body, #root {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.horizontal-display > section {
+    min-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent !important;
+}

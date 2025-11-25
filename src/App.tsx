@@ -1,14 +1,15 @@
 import "./App.css";
-import {HeroSection, About, TechStack, Projects} from "./components"
+import { HeroSection, About, TechStack, Projects } from "./components";
 
 function App() {
-
   return (
     <>
-      <HeroSection/>
-      <Projects/>
-      <TechStack/>
-      <About/>
+      <div className="horizontal-display">
+        <HeroSection />
+        <Projects />
+        <TechStack />
+        <About />
+      </div>
     </>
   );
 }

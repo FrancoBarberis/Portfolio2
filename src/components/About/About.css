@@ -1,22 +1,23 @@
 .about {
-    min-height: 100vh;
-    height: auto;
-    width: 100%;
+    min-width: 100vw;
+    width: 100vw;
+    height: 100vh;
     margin: 0;
-    padding: 80px 20px;
+    padding: 0 10vw;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    background: var(--gradient-black-blue);
-    color: var(--blanco);
-    overflow-x: hidden;
+    align-items: flex-start;
+    background: transparent !important;
+    color: #fff;
+    overflow: hidden;
 }
 
 .about-container {
     max-width: 1200px;
-    width: 100%;
+    width: 80vw;
+    margin: 0 auto;
 }
 
 .about-title {
