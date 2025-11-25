@@ -1,31 +1,20 @@
-.projects {
-  width: 100%;
-  min-height: 100vh;
-  height: auto;
-  background: var(--gradient-diagonal);
-  color: var(--blanco);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 20px;
-  box-sizing: border-box;
-}
-
 .projects-list {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 2vw;
-  width: 80vw;
-  max-width: 1200px;
+  width: 70vw;
+  height: 65vh;
+  max-width: 1000px;
+  max-height: 700px;
   box-sizing: border-box;
-  justify-content: center;
-  align-items: stretch;
-  overflow-x: hidden;
+  justify-items: center;
+  align-items: center;
   margin: 0 auto;
-    background: rgba(0,0,0,0.5);
-    border-radius: 18px;
-    padding: 2rem 2.5rem;
+  background: rgba(0,0,0,0.5);
+  border-radius: 18px;
+  padding: 2.5rem 3rem;
+  margin-bottom: 8vh;
 }
 
 /* Desktop: 2 columns for horizontal 16:9 cards */
@@ -45,9 +34,16 @@
 
 .projects h1 {
   font-size: 3rem;
-  margin-bottom: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 2px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
 }
 
 .projects p {

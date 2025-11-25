@@ -3,39 +3,73 @@
     width: 100vw;
     height: 100vh;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background: transparent !important;
+    padding: 0;
+    margin: 0;
 }
+
 .studies-container {
-    width: 80vw;
-    height: 80vh;
-    max-width: 1200px;
-    margin: 0 0 4vh auto;
+    width: 70vw;
+    height: 65vh;
+    max-width: 1000px;
+    max-height: 700px;
+    margin: 0 auto 8vh auto;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-        background: rgba(0,0,0,0.5);
-        border-radius: 18px;
-        padding: 2rem 2.5rem;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    border-radius: 18px;
+    padding: 2rem 2.5rem;
 }
 .studies-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
+.studies-title {
+    font-size: 3rem;
     font-weight: 700;
-    text-align: right;
+    text-align: center;
     margin-bottom: 2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-}
-.timeline {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    gap: 2vw;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
 }
+
+.timeline {
+    width: 80%;
+    min-width: 400px;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    gap: 60px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #00d4ff, #0078d4, #00d4ff);
+    z-index: 0;
+    border-radius: 2px;
+    transform: translateY(-50%);
+}
+
 .timeline-item {
+    position: relative;
     background: rgba(0,0,0,0.7);
     border-radius: 12px;
     padding: 1rem 2rem;
@@ -43,13 +77,13 @@
     max-width: 300px;
     color: #fff;
     box-shadow: 0 2px 16px rgba(0,0,0,0.2);
-    .timeline-item {
-        min-width: 220px;
-        max-width: 300px;
-        color: #fff;
-        padding: 0;
-        margin: 0 1vw;
-    }
+    margin: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .timeline-year {
     font-size: 1.2rem;
     font-weight: bold;

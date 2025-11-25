@@ -1,3 +1,12 @@
+/* Botones de navegación en la esquina inferior derecha */
+.nav-buttons {
+    position: absolute;
+    right: 3vw;
+    bottom: 3vh;
+    display: flex;
+    gap: 1rem;
+    z-index: 10;
+}
 /* Remove gaps between sections */
 #root>section {
     margin: 0;
@@ -28,6 +37,17 @@ body::before {
     z-index: -1;
     transform: scale(1.1);
     transform-origin: center;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+body::before::-moz-selection {
+    background: none;
+}
+
+body::before::selection {
+    background: none;
 }
 
 body, #root {
@@ -49,4 +69,30 @@ body, #root {
     align-items: center;
     justify-content: center;
     background: transparent !important;
+}
+.section-navigator {
+     width: 100vw;
+     height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     position: relative;
+}
+
+.section-navigator > section,
+.section-navigator > div {
+     width: 100vw;
+     height: 100vh;
+     position: absolute;
+     top: 0;
+     left: 0;
+     opacity: 0;
+     pointer-events: none;
+     transition: opacity 0.6s cubic-bezier(.4,0,.2,1);
+}
+.section-navigator > .active-section {
+     opacity: 1;
+     pointer-events: auto;
+     position: relative;
+     z-index: 1;
 }

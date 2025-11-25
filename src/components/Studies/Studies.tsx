@@ -24,11 +24,9 @@ export default function Studies() {
                     {education.map((item, index) => (
                         <div key={index} className="timeline-item">
                             <div className="timeline-year">{item.year}</div>
-                            <div className="timeline-content">
-                                <h3 className="timeline-item-title">{item.title}</h3>
-                                <p className="timeline-institution">{item.institution}</p>
-                                <p className="timeline-description">{item.description}</p>
-                            </div>
+                            <h3 className="timeline-item-title">{item.title}</h3>
+                            <p className="timeline-institution">{item.institution}</p>
+                            <p className="timeline-description">{item.description}</p>
                         </div>
                     ))}
                 </div>
