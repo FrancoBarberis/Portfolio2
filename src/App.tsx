@@ -1,5 +1,6 @@
 import "./App.css";
 import { HeroSection, About, TechStack, Projects } from "./components";
+import Studies from "./components/Studies/Studies";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <Projects />
         <TechStack />
         <About />
+        <Studies />
       </div>
     </>
   );
