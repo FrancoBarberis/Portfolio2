@@ -4,7 +4,7 @@
   width: 100vw;
   height: 100vh;
   align-items: center;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .projects h1 {
@@ -43,10 +43,7 @@
     gap: 20px;
   }
 }
-.projects p {
-  font-size: 1.2rem;
-  text-align: right;
-}
+
 
 @media (max-width: 768px) {
   .projects {

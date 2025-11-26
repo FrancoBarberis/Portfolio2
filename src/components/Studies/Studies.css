@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     padding: 0;
     margin: 0;
 }
@@ -21,6 +21,7 @@
     border-radius: 18px;
     padding: 2rem 2.5rem;
 }
+
 .studies-title {
     font-size: 3rem;
     font-weight: 700;
@@ -65,13 +66,13 @@
 
 .timeline-item {
     position: relative;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.7);
     border-radius: 12px;
     padding: 1rem 2rem;
     min-width: 220px;
     max-width: 300px;
     color: #fff;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
     margin: 0;
     z-index: 1;
     display: flex;
@@ -79,20 +80,24 @@
     justify-content: center;
     align-items: center;
 }
+
 .timeline-year {
     font-size: 1.2rem;
     font-weight: bold;
     color: #00d4ff;
 }
+
 .timeline-item-title {
     font-size: 1.1rem;
     font-weight: 700;
     margin: 0.5rem 0;
 }
+
 .timeline-institution {
     font-size: 1rem;
     color: #e0e0e0;
 }
+
 .timeline-description {
     font-size: 0.95rem;
     color: #b0b0b0;
